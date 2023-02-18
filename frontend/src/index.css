@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Freehand&family=Kantumruy:wght@300;400;700&family=Noto+Sans+Khmer:wght@200;300;400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.modal-font {
+  font-family: "Kantumruy", sans-serif;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary) var(--primary);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 1px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #333;
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 14px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Kantumruy", sans-serif;
+  background-color: #ddd;
+}
+
+@layer utilities {
+  .scrollbar::-webkit-scrollbar {
+    width: 0.5px;
+    height: 0.5px;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #333;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 100vh;
+    border: 0.5px solid #999;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #333;
+  }
+}
