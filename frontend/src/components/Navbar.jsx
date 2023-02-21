@@ -152,7 +152,7 @@ const Navbar = () => {
         flex flex-wrap
         items-center
         justify-between
-        py-4
+        h-[8vh]
         bg-blue-50
         text-gray-500
         hover:text-gray-700

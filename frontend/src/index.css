@@ -8,6 +8,10 @@
   font-family: "Kantumruy", sans-serif;
 }
 
+#modal-font {
+  font-family: "Kantumruy", sans-serif;
+}
+
 /* Firefox */
 * {
   scrollbar-width: thin;

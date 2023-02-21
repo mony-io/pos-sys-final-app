@@ -11,7 +11,7 @@ import Navbar from "../components/Navbar";
 
 const dashboard = () => {
   return (
-    <div className="flex-1 h-screen">
+    <div className="flex-1">
       <Navbar />
       <div className="grid grid-cols-4 gap-4 w-full">
         <div className="col-span-1 h-32 m-2">
@@ -94,7 +94,7 @@ const dashboard = () => {
             <span className="text-sm ml-8">របាយការណ៍សង្ខេបធាតុថ្ងៃនេះ</span>
           </div>
         </div>
-        <div className="col-span-4 bg-white h-[400px] m-2 mb-4">
+        <div className="col-span-4 bg-white h-[540px] m-2 mb-4">
           <h2 className="text-center text-xl mt-3 text-slate-600">
             របាយការណ៍នៃការលក់
           </h2>

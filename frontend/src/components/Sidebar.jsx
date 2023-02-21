@@ -21,7 +21,7 @@ const Sidebar = () => {
           <div
             className={`flex-2 ${
               open ? "w-56" : "w-12"
-            } bg-[#222] h-[100vh] scrollbar relative  duration-200 shadow-lg`}
+            } bg-[#222] h-[100vh] scrollbar relative duration-200 shadow-lg`}
             id="sidenavExample"
           >
             <div

@@ -161,7 +161,7 @@ const AddProduct = () => {
           <h1 className="text-xl mb-4 text-left">បន្ថែមផលិតផល</h1>
           <div className="w-full h-1 bg-blue-400 mb-1 shadow-sm"></div>
           <div className="shadow bg-white rounded-sm">
-            <h2 className="text-left ml-1 p-1">សូម!​ បំពេញពត៍មានខាងក្រោម</h2>
+            <h2 className="text-left ml-1 p-1">សូម! បំពេញពត៍មានខាងក្រោម</h2>
             <div className="flex justify-around mt-5">
               {/* column 1 */}
               <div className="flex-col mt-5">
@@ -192,7 +192,7 @@ const AddProduct = () => {
                     name="category_id"
                     onChange={handleChange}
                   >
-                    <option>select category</option>
+                    <option>ជ្រើសរើសប្រភេទ</option>
                     {categories.map((item, inext) => {
                       return (
                         <option value={item.id} key={inext + 1}>
@@ -229,7 +229,7 @@ const AddProduct = () => {
                   focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
                 "
                     id="ProductName"
-                    placeholder="Product Name"
+                    placeholder="ឈ្មោះ​ផលិតផល"
                     name="product_name"
                     onChange={handleChange}
                   />
@@ -261,7 +261,7 @@ const AddProduct = () => {
                     focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
                   "
                     id="ProductCode"
-                    placeholder="Product Code"
+                    placeholder="លេខកូដផលិតផល"
                     name="product_code"
                     onChange={handleChange}
                   />
@@ -293,7 +293,7 @@ const AddProduct = () => {
                     name="brand_id"
                     onChange={handleChange}
                   >
-                    <option>select brand</option>
+                    <option>ជ្រើសរើសម៉ាក</option>
                     {brands.map((item, index) => {
                       return (
                         <option value={item.id} key={index + 1}>
@@ -331,7 +331,7 @@ const AddProduct = () => {
                     name="unit_id"
                     onChange={handleChange}
                   >
-                    <option selected>select product units</option>
+                    <option selected>ជ្រើសរើសឯកតាផលិតផល</option>
                     {units.map((item, index) => {
                       return (
                         <option value={item.id} key={index + 1}>
@@ -371,7 +371,7 @@ const AddProduct = () => {
                   "
                     name="unit_price"
                     id="UnitPrice"
-                    placeholder="Unit Price"
+                    placeholder="តម្លៃ​ដើម"
                     onChange={handleChange}
                   />
                 </div>
@@ -402,7 +402,7 @@ const AddProduct = () => {
                     focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
                   "
                     id="outPrice"
-                    placeholder="sale out price"
+                    placeholder=" តម្លៃលក់ចេញ"
                     name="price"
                     onChange={handleChange}
                   />
@@ -444,7 +444,7 @@ const AddProduct = () => {
                     htmlFor="status"
                     className="form-label inline-block mb-2 text-gray-700"
                   >
-                    Status
+                    ស្ថានភាព
                   </label>
                   <select
                     className="form-select appearance-none
@@ -468,7 +468,7 @@ const AddProduct = () => {
                     name="status"
                     onChange={handleChange}
                   >
-                    <option selected>product status</option>
+                    <option selected>ស្ថានភាពផលិតផល</option>
                     {status.map((item, index) => {
                       return (
                         <option value={item.id} key={index + 1}>
@@ -483,7 +483,7 @@ const AddProduct = () => {
                     htmlFor="qtyAlert"
                     className="form-label inline-block mb-2 text-gray-700"
                   >
-                    Quanity Alert
+                    ការជូនដំណឹងអំពីបរិមាណ
                   </label>
                   <input
                     type="number"
@@ -506,7 +506,7 @@ const AddProduct = () => {
                   "
                     name="reorder_number"
                     id="qtyAlert"
-                    placeholder="Quanity Alert"
+                    placeholder="ការជូនដំណឹងអំពីបរិមាណ"
                     onChange={handleChange}
                   />
                 </div>
@@ -543,7 +543,7 @@ const AddProduct = () => {
                   "
                     id="qty"
                     name="qty"
-                    placeholder="Qty"
+                    placeholder="ចំនួន"
                     onChange={handleChange}
                   />
                 </div>
@@ -576,7 +576,7 @@ const AddProduct = () => {
                     name="sub_id"
                     onChange={handleChange}
                   >
-                    <option>select supplyer</option>
+                    <option>ជ្រើសរើសអ្នកផ្គត់ផ្គង់</option>
                     {supplies.map((item, index) => {
                       return (
                         <option value={item.id} key={index + 1}>
@@ -614,7 +614,7 @@ const AddProduct = () => {
                   "
                     id="desc"
                     rows="3"
-                    placeholder="Your message"
+                    placeholder="សារ​របស់​អ្នក"
                     name="desc"
                     onChange={handleChange}
                   ></textarea>
@@ -662,13 +662,13 @@ const AddProduct = () => {
                 className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                 onClick={handleSubmit}
               >
-                Submit
+                បញ្ជូន
               </button>
               <button
                 type="button"
                 className="inline-block px-6 py-2.5 bg-red-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out"
               >
-                Clear
+                សម្អាត
               </button>
             </div>
           </div>

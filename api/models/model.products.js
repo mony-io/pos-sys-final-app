@@ -107,15 +107,7 @@ class Product {
   }
 
   static findAllProduct() {
-    const sql = `SELECT product_code,product_name,tblBrands.brandName,tblCategories.categoryName,unit_price,
-      price
-      FROM tblProducts
-      LEFT JOIN tblCategories 
-      ON tblProducts.category_id = tblCategories.id
-      LEFT JOIN tblBrands
-      ON tblProducts.brand_id = tblBrands.id
-      LEFT JOIN tblUnits 
-      ON tblProducts.unit_id = tblUnuts.id 
+    const sql = `SELECT *FROM getallproducts
     `;
     return db.execute(sql);
   }

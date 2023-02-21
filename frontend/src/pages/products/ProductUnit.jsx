@@ -305,7 +305,7 @@ const ProductUnit = () => {
             </div>
             {/* end of add model */}
           </div>
-          <div className="rounded shadow mt-6 h-[500px]">
+          <div className="rounded shadow mt-6 h-[630px]">
             <table className="w-full table-auto">
               <thead className="bg-gray-50 border-gray-200">
                 <tr className="border-b bg-blue-100 border-blue-200">

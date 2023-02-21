@@ -4,7 +4,7 @@ import SaleItem from "./SaleItem";
 const Main = (props) => {
   const { products, onAdd, search } = props;
   return (
-    <div className="grid grid-cols-8 grid-rows-1 gap-1 m-2">
+    <div className="grid grid-cols-8 grid-rows-1 gap-1 p-2">
       {products
         .filter((item) => {
           return search.toLowerCase() === ""

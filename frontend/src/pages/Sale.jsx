@@ -32,23 +32,10 @@ const Sale = () => {
       setCartItems(
         cartItems.map((x) =>
           x.product_id === product.product_id && x.qty < x.old_qty
-            ? { ...exist, qty: exist.qty + 1 }
+            ? { ...exist, qty: parseInt(exist.qty + 1) }
             : x
         )
       );
-      if (exist.qty >= exist.old_qty) {
-        playAudio("http://localhost:3001/audio/audio-notification-sound.mp3");
-        toast.error("🦄 សូមអភ័យទោស! ចំនួនផលិតផលរបស់អ្នកមិនគ្រប់គ្រាន់ទេ", {
-          position: "top-center",
-          autoClose: 4000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
-      }
     } else {
       setCartItems([
         ...cartItems,
@@ -84,6 +71,20 @@ const Sale = () => {
             : x
         )
       );
+
+      if (qty > exist.old_qty) {
+        playAudio("http://localhost:3001/audio/audio-notification-sound.mp3");
+        toast.error("🦄 សូមអភ័យទោស!ចំនួនផលិតផលរបស់អ្នកមិនគ្រប់គ្រាន់ទេ", {
+          position: "top-right",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      }
     } else {
       setCartItems([
         ...cartItems,
@@ -92,14 +93,23 @@ const Sale = () => {
     }
   };
 
+  const deleteHandler = (product) => {
+    const exist = cartItems.find((x) => x.product_id === product.product_id);
+    if (exist) {
+      setCartItems(
+        cartItems.filter((x) => x.product_id !== product.product_id)
+      );
+    }
+  };
+
   return (
     <>
       <div className="flex-1">
         <Navbar />
-        <div className="grid grid-cols-6 gap-4 ml-4 mr-4 pt-4">
-          <div className="col-span-2 mr-6 bg-blue-50 h-[740px]">
+        <div className="grid grid-cols-6 gap-x-4 pl-4 pr-4 pt-4 h-[88vh]">
+          <div className="col-span-2 mr-6 bg-blue-50">
             <div className="grid grid-cols-4 gap-4">
-              <div className="col-span-4 h-[38px] mt-[4px] px-1">
+              <div className="col-span-4 h-[38px] pt-[4px] px-1">
                 <div className="flex">
                   <select
                     name=""
@@ -126,12 +136,13 @@ const Sale = () => {
                     onAdd={onAdd}
                     onRemove={onRemove}
                     onChangeHandler={onChangeHandler}
+                    deleteHandler={deleteHandler}
                   />
                 </div>
               </div>
             </div>
           </div>
-          <div className="col-span-4 -ml-6 overflow-auto scrollbar h-[740px] bg-blue-50">
+          <div className="col-span-4 -ml-6 overflow-auto scrollbar h-[88vh] bg-blue-50">
             <div className="h-12 px-1 flex justify-between items-center">
               <div className="flex items-center rounded-sm overflow-hidden">
                 <input

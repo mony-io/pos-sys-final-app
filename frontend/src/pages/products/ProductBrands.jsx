@@ -307,7 +307,7 @@ const ProductBrands = () => {
             </div>
             {/* end of add model */}
           </div>
-          <div className="rounded-lg shadow overflow-auto hidden md:block mt-6 h-[520px]">
+          <div className="rounded-lg shadow overflow-auto hidden md:block mt-6 h-[630px]">
             <table className="w-full table-auto">
               <thead className="bg-gray-50 border-gray-200">
                 <tr className="border-b-2 border-gray-100">
