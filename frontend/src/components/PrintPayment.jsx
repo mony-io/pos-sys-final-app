@@ -6,7 +6,7 @@ function PrintPayment(props) {
   return (
     <>
       <div ref={componentRef} className="w-full h-[window.innerHeight]">
-        <div className="flex justify-between my-3 py-9 px-6 flex-col border-b-2 mx-2 border-b-gray-800">
+        <div className="flex justify-between my-3 py-9 px-6 flex-col border-b-2 mx-9 border-b-gray-800">
           <h1 className="text-center text-3xl mb-2">
             PSS <span className="text-2xl">គ្រឿងសំណង់</span>
           </h1>
@@ -16,7 +16,7 @@ function PrintPayment(props) {
           <p className="">Tel: 099 74 36 34 / 081 64 23 12</p>
           <h3 className="text-center text-lg font-semibold mt-8">វិក្កយបត្រ</h3>
         </div>
-        <div class="relative overflow-x-auto bg-white mx-2">
+        <div class="relative overflow-x-auto bg-white mx-9">
           <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead class="text-md uppercase text-gray-800">
               <tr>
@@ -30,19 +30,13 @@ function PrintPayment(props) {
                   scope="col"
                   class="px-6 py-4 border-r dark:border-gray-700 border-b"
                 >
-                  ឈ្មោះ​ផលិតផល
+                  ការបរិយាយ
                 </th>
                 <th
                   scope="col"
                   class="px-6 py-4 border-r dark:border-gray-700 border-b"
                 >
                   បរិមាណ
-                </th>
-                <th
-                  scope="col"
-                  class="px-6 py-4 border-r dark:border-gray-700 border-b"
-                >
-                  ការពិពណ៌នា
                 </th>
                 <th
                   scope="col"
@@ -70,7 +64,6 @@ function PrintPayment(props) {
                   Steel
                 </th>
                 <td class="px-6 py-4 dark:border-gray-700 border-r">3</td>
-                <td class="px-6 py-4 dark:border-gray-700 border-r">Silver</td>
                 <td class="px-6 py-4 dark:border-gray-700 border-r">$12</td>
                 <td class="px-6 py-4">$12</td>
               </tr>
@@ -88,7 +81,6 @@ function PrintPayment(props) {
                   Microsoft
                 </th>
                 <td class="px-6 py-4 dark:border-gray-700 border-r">3</td>
-                <td class="px-6 py-4 dark:border-gray-700 border-r">White</td>
                 <td class="px-6 py-4 dark:border-gray-700 border-r">$120</td>
                 <td class="px-6 py-4">$120</td>
               </tr>
@@ -106,7 +98,6 @@ function PrintPayment(props) {
                   Magic
                 </th>
                 <td class="px-6 py-4 dark:border-gray-700 border-r">3</td>
-                <td class="px-6 py-4 dark:border-gray-700 border-r">Black</td>
                 <td class="px-6 py-4 dark:border-gray-700 border-r">$38</td>
                 <td class="px-6 py-4">$38</td>
               </tr>
@@ -124,27 +115,61 @@ function PrintPayment(props) {
                   Magic
                 </th>
                 <td class="px-6 py-4 dark:border-gray-700 border-r">3</td>
-                <td class="px-6 py-4 dark:border-gray-700 border-r">Black</td>
                 <td class="px-6 py-4 dark:border-gray-700 border-r">$38</td>
                 <td class="px-6 py-4">$38</td>
               </tr>
-              <tr className="font-semibold text-lg text-gray-800">
-                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
-                  SubTotal:
-                </th>
-                <td class="px-6 py-4 font-normal">$1230</td>
-                <td class="px-6 py-4 font-normal"></td>
-                <td class="px-6 py-4 font-normal"></td>
-                <th scope="row" class="px-6 py-4 font-medium whitespace-nowrap">
-                  Total:
-                </th>
-                <td class="px-6 py-4 font-normal">$125</td>
+              <tr class="bg-white dark:bg-gray-800 border-b">
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                ></th>
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                ></th>
+                <td class="px-6 py-4 dark:border-gray-700 border-r"></td>
+                <td class="px-6 py-4 text-gray-800 dark:border-gray-700 border-r">
+                  សរុប
+                </td>
+                <td class="px-6 py-4">$38</td>
+              </tr>
+              <tr class="bg-white">
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                ></th>
+                <th
+                  scope="row"
+                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                ></th>
+                <td class="px-6 py-4 dark:border-gray-700 border-r"></td>
+                <td class="px-6 py-4 text-gray-800 dark:border-gray-700 border-r">
+                  តម្លៃសរុប
+                </td>
+                <td class="px-6 py-4">$38</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <div className="bg-slate-800 h-[2px] mx-2 mt-4"></div>
-        <h3 className="text-center text-lg mt-3">
+        <div className="bg-slate-800 h-[2px] mx-9 mt-4"></div>
+        <div class="grid grid-cols-6 mt-3 gap-4 mx-9 text-sm">
+          <div className="col-span-2">
+            <h3>
+              បង់ដោយ: <span></span>
+            </h3>
+          </div>
+          <div className="col-span-2">
+            <h3>
+              ប្រាក់បានបង់: <span></span>
+            </h3>
+          </div>
+          <div className="col-span-2">
+            <h3>
+              ប្រាក់បានអាប់: <span></span>
+            </h3>
+          </div>
+        </div>
+        <h3 className="text-center text-lg mt-9">
           Thank you ! Please come again
         </h3>
         <h3 className="text-center mt-1">ទំនិញទិញរួចមិនអាចដូរវិញបានទេ</h3>
