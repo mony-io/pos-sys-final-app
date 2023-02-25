@@ -174,7 +174,7 @@ const Navbar = () => {
                   />
                 </div>
                 {/* <!-- Left links --> */}
-                <ul className="navbar-nav flex flex-col pl-0 list-style-none mr-auto">
+                {/* <ul className="navbar-nav flex flex-col pl-0 list-style-none mr-auto">
                   <li className="nav-item p-2">
                     <a
                       className="nav-link text-[#333] hover:text-gray-500 focus:text-gray-500 p-0"
@@ -183,7 +183,7 @@ const Navbar = () => {
                       Dashboard
                     </a>
                   </li>
-                </ul>
+                </ul> */}
                 {/* <!-- Left links --> */}
               </div>
               {/* date time */}

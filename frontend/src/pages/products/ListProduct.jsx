@@ -3,8 +3,6 @@ import { BsPencilSquare } from "react-icons/bs";
 import { AiTwotoneDelete } from "react-icons/ai";
 import Navbar from "../../components/Navbar";
 import { Link } from "react-router-dom";
-// import { toast, ToastContainer } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
 
 const ListProduct = () => {
@@ -12,6 +10,9 @@ const ListProduct = () => {
   const [search, setSearch] = useState("");
   const [products, setProducts] = useState([]);
 
+  // pagination
+
+  // list products
   const fetchProducts = async () => {
     try {
       const res = await axios.get("http://localhost:3001/products");
@@ -24,6 +25,17 @@ const ListProduct = () => {
   useEffect(() => {
     fetchProducts();
   }, []);
+
+  // delete product
+  const handleDelete = async (id) => {
+    try {
+      const res = await axios.delete(`http://localhost:3001/products/${id}`);
+      fetchProducts();
+      console.log(res);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <>
@@ -126,7 +138,12 @@ const ListProduct = () => {
                           <button className="mx-2 px-3 py-1.5 rounded font-medium tracking-wider text-blue-700 bg-blue-200 hover:shadow">
                             <BsPencilSquare size={20} />
                           </button>
-                          <button className="px-3 py-1.5 rounded font-medium tracking-wider text-red-600 bg-red-200 hover:shadow">
+                          <button
+                            onClick={() => {
+                              handleDelete(item.id);
+                            }}
+                            className="px-3 py-1.5 rounded font-medium tracking-wider text-red-600 bg-red-200 hover:shadow"
+                          >
                             <AiTwotoneDelete size={20} />
                           </button>
                         </td>

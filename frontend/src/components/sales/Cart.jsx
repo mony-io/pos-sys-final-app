@@ -69,9 +69,9 @@ const Cart = (props) => {
         {cartItems.map((item) => (
           <div
             key={item.product_id}
-            className="flex justify-between items-center p-2 text-slate-600"
+            className="flex justify-between text-xs items-center p-2 text-slate-600"
           >
-            <div className="text-sm w-[70px] ml-6">{item.product_name}</div>
+            <div className="w-[80px] ml-6">{item.product_name}</div>
             <div className="flex items-center">
               <GoPlus
                 className="text-blue-500 mr-1 cursor-pointer"

@@ -66,7 +66,7 @@ const dashboard = () => {
               <div className="border-gray-400 border-r-2 pr-3">
                 <HiShoppingCart size={24} className="ml-4 " />
               </div>
-              <span className="text-sm ml-8">ការលក់</span>
+              <span className="text-sm ml-8">បញ្ជាការលក់</span>
             </div>
           </Link>
         </div>
